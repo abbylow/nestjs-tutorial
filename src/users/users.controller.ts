@@ -17,7 +17,7 @@ import { UpdateUserDto } from './dto/update-user.dto';
 @Controller('users') // parent route is `/users`
 export class UsersController {
   // create an instance of users service; if it was created elsewhere, nestjs identifies it's a Singleton and pull it in.
-  constructor(private readonly usersService: UsersService) { }
+  constructor(private readonly usersService: UsersService) {}
 
   @Get() // GET /users or /users?role=value
   findAll(@Query('role') role?: 'INTERN' | 'ENGINEER' | 'ADMIN') {
