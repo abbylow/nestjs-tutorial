@@ -12,6 +12,7 @@ import { APP_GUARD } from '@nestjs/core';
     UsersModule,
     DatabaseModule,
     EmployeesModule,
+    // both rate limit configs are applied - AND condition
     ThrottlerModule.forRoot([
       {
         name: 'short',
